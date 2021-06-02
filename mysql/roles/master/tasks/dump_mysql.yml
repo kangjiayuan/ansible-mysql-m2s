@@ -1,0 +1,10 @@
+- name: dump sql
+  community.mysql.mysql_db:
+          login_user: root
+          login_password: 123456
+          state: dump
+          name: all
+          single_transaction: yes
+          master_data: 1
+          dump_extra_args: --flush-privileges
+          target: /tmp/mysql.sql

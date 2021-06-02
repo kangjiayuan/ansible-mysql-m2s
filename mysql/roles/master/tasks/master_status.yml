@@ -1,0 +1,15 @@
+- name: test module
+  mysql_info:
+     login_user: root
+     login_password: '123456'
+     filter:
+       - master_status
+  register: msinfo
+
+- name: set bin_log
+  set_fact:
+     bin_log: "{{ msinfo.master_status.File }}"
+         
+- name: set bin_log_pos
+  set_fact:
+     pos: "{{ msinfo.master_status.Position }}"

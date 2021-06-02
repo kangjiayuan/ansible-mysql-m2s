@@ -1,0 +1,8 @@
+---
+# tasks file for roles/master
+
+- include: create_repu.yml
+
+- include: dump_mysql.yml
+
+- include: master_status.yml

@@ -1,0 +1,5 @@
+---
+# tasks file for install
+- include: install_mysql8.yml
+
+- include: install_pymysql.yml

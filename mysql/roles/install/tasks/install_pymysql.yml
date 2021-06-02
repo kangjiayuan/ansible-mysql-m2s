@@ -1,0 +1,7 @@
+---
+
+- name: install env
+  yum:
+    name:
+      - python2-PyMySQL
+      - python3-PyMySQL

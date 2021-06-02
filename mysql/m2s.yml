@@ -1,0 +1,24 @@
+---
+
+- name: install mysql
+  hosts: all
+  remote_user: root
+
+  roles:
+    - install
+
+
+- name: create replcation account and backup database
+  hosts: master
+  remote_user: root
+
+  roles:
+    - master
+
+
+- name: configure master and start slave on (may reload master backup)
+  hosts: slave
+  remote_user: root
+  
+  roles:
+    - slave
