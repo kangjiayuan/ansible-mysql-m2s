@@ -1,0 +1,10 @@
+- name: create repulation
+  mysql_user:
+          login_user: root
+          login_password: 123456
+          name: repluser
+          host: "10.0.0.%"
+          password: '123456'
+          priv: '*.*:REPLICATION SLAVE'
+          state: present
+          sql_log_bin: yes 

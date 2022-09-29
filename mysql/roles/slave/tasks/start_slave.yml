@@ -1,0 +1,7 @@
+- name: start slave
+  mysql_replication:
+      login_user: root
+      login_password: '123456'
+      mode: startslave
+  tags: start_slave        
+

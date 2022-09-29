@@ -1,0 +1,12 @@
+
+- name: prepare repl
+  mysql_replication:
+          login_user: "root"
+          login_password: '123456'
+          mode: changemaster
+          #login_unix_socket: '/var/lib/mysql/mysql.sock'
+          master_user: repluser
+          master_password: '123456'
+          master_host: 10.0.0.35
+          master_log_file: "{{ hostvars['10.0.0.35']['bin_log'] }}"
+          master_log_pos: "{{ hostvars['10.0.0.35']['pos'] }}"

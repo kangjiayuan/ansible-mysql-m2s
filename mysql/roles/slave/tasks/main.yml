@@ -1,0 +1,6 @@
+---
+# tasks file for roles/slave
+
+- include: set_replcation.yml
+
+- include: start_slave.yml
